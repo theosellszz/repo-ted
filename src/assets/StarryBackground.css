@@ -1,0 +1,28 @@
+.starry-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.starry-bg::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: transparent url('https://raw.githubusercontent.com/KunalTanwar/image-repo/main/stars.gif') repeat top center;
+  background-size: cover;
+  animation: moveBackground 90s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-25%, -25%);
+  }
+}
