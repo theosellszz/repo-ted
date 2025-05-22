@@ -1,10 +1,17 @@
 import React from 'react';
 
-const Checkout = () => (
-  <div>
-    <h2>Text to Checkout</h2>
-    <p>To complete your order, please text us at <strong>203-817-4168</strong> or message us on <a href="https://wa.me/12038174168" target="_blank" rel="noreferrer">WhatsApp</a>.</p>
-  </div>
-);
+const Checkout = () => {
+  const phoneNumber = '203-817-4168';
+
+  return (
+    <div className="page">
+      <h2>Checkout</h2>
+      <p>To complete your purchase, contact the seller:</p>
+      <a href={`sms:${phoneNumber}`} className="btn">Text via iMessage</a>
+      <br />
+      <a href={`https://wa.me/1${phoneNumber}`} className="btn">Message on WhatsApp</a>
+    </div>
+  );
+};
 
 export default Checkout;
