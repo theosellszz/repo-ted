@@ -1,30 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import airpodsImg from '../assets/airpods.jpg';
-import cologneImg from '../assets/cologne.jpg';
-import hoodieImg from '../assets/hoodie.jpg';
-
-const Products = () => {
+// src/pages/ProductPage.jsx
+export default function ProductPage() {
   const products = [
-    { id: 1, name: 'AirPods Pro', image: airpodsImg },
-    { id: 2, name: 'Dior Cologne', image: cologneImg },
-    { id: 3, name: 'Sp5der Hoodie', image: hoodieImg },
+    { name: 'AirPods Gen 2', price: 50 },
+    { name: 'AirPods Pro', price: 65 },
+    { name: 'Sp5der Hoodie', price: 120 },
+    { name: 'Denim Tears Hoodie', price: 140 },
   ];
 
   return (
-    <div className="page">
-      <h2>Our Products</h2>
-      <div className="product-grid">
-        {products.map((item) => (
-          <div key={item.id} className="product-card">
-            <img src={item.image} alt={item.name} />
-            <h3>{item.name}</h3>
-            <Link to="/checkout" className="btn">Buy Now</Link>
+    <div className="container">
+      <h1 className="text-2xl mb-4">Products</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {products.map((product, index) => (
+          <div key={index} className="bg-[#222] p-4 rounded-xl shadow">
+            <h2 className="text-xl font-bold">{product.name}</h2>
+            <p className="text-lg">${product.price}</p>
+            <button className="mt-2">Buy Now</button>
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-export default Products;
+}
