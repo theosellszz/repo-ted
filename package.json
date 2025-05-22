@@ -1,5 +1,5 @@
 {
-  "name": "resell-site",
+  "name": "resell-website",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,9 +14,9 @@
   },
   "devDependencies": {
     "vite": "^4.5.0",
-    "@vitejs/plugin-react": "^4.0.3"
+    "@vitejs/plugin-react": "^4.0.0"
   },
   "engines": {
-    "node": "20"
+    "node": ">=20"
   }
 }
