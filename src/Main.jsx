@@ -1,10 +1,11 @@
+// src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MainRoutes from './MainRoutes';
-import './styles/global.css';
+import App from './App.jsx';
+import './global.css'; // ✅ Make sure this exists and has no typos
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MainRoutes />
+    <App />
   </React.StrictMode>
 );
