@@ -12,15 +12,10 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div style={{ padding: '2rem', color: 'white' }}>
+    <div>
       <h2>Admin Login</h2>
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter admin email"
-        style={{ padding: '0.5rem', marginRight: '0.5rem' }}
-      />
-      <button onClick={handleLogin} style={{ padding: '0.5rem' }}>Login</button>
+      <input value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter admin email" />
+      <button onClick={handleLogin}>Login</button>
     </div>
   );
 };
