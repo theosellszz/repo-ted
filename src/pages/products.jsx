@@ -1,19 +1,30 @@
 import React from 'react';
-import ProductCard from '../components/ProductCard';
+import { Link } from 'react-router-dom';
+import airpodsImg from '../assets/airpods.jpg';
+import cologneImg from '../assets/cologne.jpg';
+import hoodieImg from '../assets/hoodie.jpg';
 
-const products = [
-  { id: 1, name: 'AirPods Pro 1:1', img: '/airpods.jpg' },
-  { id: 2, name: 'Luxury Cologne 1:1', img: '/cologne.jpg' },
-  { id: 3, name: 'Designer Hoodie 1:1', img: '/hoodie.jpg' },
-];
+const Products = () => {
+  const products = [
+    { id: 1, name: 'AirPods Pro', image: airpodsImg },
+    { id: 2, name: 'Dior Cologne', image: cologneImg },
+    { id: 3, name: 'Sp5der Hoodie', image: hoodieImg },
+  ];
 
-const Products = () => (
-  <div>
-    <h2>Our Products</h2>
-    <div className="product-grid">
-      {products.map(product => <ProductCard key={product.id} product={product} />)}
+  return (
+    <div className="page">
+      <h2>Our Products</h2>
+      <div className="product-grid">
+        {products.map((item) => (
+          <div key={item.id} className="product-card">
+            <img src={item.image} alt={item.name} />
+            <h3>{item.name}</h3>
+            <Link to="/checkout" className="btn">Buy Now</Link>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Products;
