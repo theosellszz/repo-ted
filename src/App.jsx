@@ -1,13 +1,3 @@
-// src/App.jsx
-import React from 'react';
-import ProductPage from './pages/ProductPage';
-
-function App() {
-  return (
-    <main>
-      <ProductPage />
-    </main>
-  );
+export default function App() {
+  return <h1>Hello, this is a working test!</h1>;
 }
-
-export default App;
