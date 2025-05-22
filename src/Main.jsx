@@ -1,11 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MainRoutes from './MainRoutes';
-import './styles/global.css'; // if you have this
+import './styles/global.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <MainRoutes />
-  </React.StrictMode>
-);
-
+ReactDOM.createRoot(document.getElementById('root')).render(<MainRoutes />);
